@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Users/Grant/Desktop/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	* {
+	font-family: Georgia, sans;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+h1, h2 {
+	margin: 4em 0 0 0;
+	text-align: Left;
+}
+
+h2 {
+	margin: 0 0 3em 0;
+}
+
+.accordion {
+  background-color: #7800ff;
+  color: #00ffff;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ff0000;
+}
+
+.panel {
+  padding: 0 25px;
+  display: none;
+  background-color: dodgerblue;
+  overflow: hidden;
+}
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 10s infinite;
+    animation: bgcolor 5s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1 >Grant Cuyler</h1>
+			<h2>Resume</h2>
+		</header>
+
+		<button class="accordion">Contact Information</button>
+		<div class="panel" style="display: none;">
+				<article>
+					<address>
+						<p>Email:</p><a href="mailto:Grantc.Cuyler@gmail.com">Grantc.Cuyler@gmail.com</a>
+					</address>
+				</article>
+				<article>
+					<address>
+						<p>Phone Number:</p><a href="file:///C:/Users/Grant/Desktop/480-227-1982">480-227-1982</a>
+					</address>
+				</article>
+				<article>
+					<address>
+							<p>Mailing Adress:</p><a href="https://sterling920tempe.com/">920 S Terrace Rd, Tempe, AZ 85281</a>
+					</address>
+				</article>
+			</div>
+
+			<button class="accordion">Objective</button>
+			<div class="panel" style="display: none;">
+				<article>
+					<p>I am currently enrolled at Arizona State University studying under the degree of Digital Culture.
+						 I am currently creating my own webpage and learning html, CSS, and JavaScript in my course work.
+						 I am looking for the opportunity to use my web development skills and gaining new experience along the way.</p>
+				</article>
+			</div>
+
+			<button class="accordion">Education</button>
+			<div class="panel">
+				<article>
+					<table>
+				  <tbody><tr>
+				    <th>School</th>
+				    <th>Graduation Year</th>
+				  </tr>
+				  <tr>
+				    <td>Desert Vista High School</td>
+				    <td>May 2018</td>
+				  </tr>
+				  <tr>
+				    <td>Arizona State University</td>
+				    <td>Still Attending</td>
+				  </tr>
+				</tbody></table>
+				</article>
+			</div>
+
+		<button class="accordion">Experience</button>
+		<div class="panel">
+		<article>
+			<ol>
+			  <li>Kyrene Kids Club</li>
+				<p>May 2017 - July 2018</p>
+			  <p>	 When I worked at Kyrene Kids Club, I spent a decent amount of time working with kids and their parents. I learned how to work well with kids and keep them under control while also being able to communicate with parents to make sure thier child was safe at all times. Working at parent table I was tasked with coordinating the release of the children from their class rooms and getting them to the front desk to hand over to their parents'. Overall, I feel it provided great work experience and I able to pull a lot of useful skills from my time there.</p>
+			</ol>
+		</article>
+	</div>
+	<button class="accordion">Personal Interests</button>
+	<div class="panel">
+			<article>
+				<ul>
+				  <li>Computer Programs and Software</li>
+				  <li>Video Games and Sound Design</li>
+				  <li>Algorithmic Computation</li>
+				</ul>
+			</article>
+		</div>
+
+
+<button class="accordion">Refrences</button>
+<div class="panel">
+		<article>
+			<ul>
+			  <li>Refrence one</li>
+			  <p>Reference info here</p>
+			  <li>Reference two</li>
+			  <p>Reference info here</p>
+			  <li>Reference three</li>
+			  <p>Reference info here</p>
+			</ul>
+		</article>
+	</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+</body></html>
